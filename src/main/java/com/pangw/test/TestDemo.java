@@ -6,11 +6,12 @@ import redis.clients.jedis.JedisPool;
 
 public class TestDemo {
     public static void main(String[] args){
-        System.out.println("fsdfsdfsd");
-        Jedis jedis = JavaRedisClient.get().getResource();
-       jedis.hincrBy("myhash","id",666l);
-       System.out.println(jedis.hincrBy("myhash","password",1l));
 
 
+        String s = "select * from t_click limit %s,%s,"+1;
+
+        String ss = String.format(s,100,12);
+
+        System.out.println(ss);
     }
 }
